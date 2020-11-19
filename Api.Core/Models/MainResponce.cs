@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Api.Core.Models
 {
-    public class Main
+    public class MainResponce
     {
         public string name { get; set; }
         public string full_name { get; set; }

@@ -1,4 +1,7 @@
 ﻿using System;
+using Api.Core;
+using Api.Core.Interfaces;
+using Api.Core.Services;
 
 namespace API.UI
 {
@@ -6,7 +9,9 @@ namespace API.UI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IRequestService request = new RequestService();
+            var resp = request.MethodAsync().GetAwaiter().GetResult();
+            Console.ReadKey();
         }
     }
 }

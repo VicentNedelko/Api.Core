@@ -6,16 +6,17 @@ using Api.Core.Constants;
 using Flurl;
 using Flurl.Http;
 using System.Threading.Tasks;
+using Api.Core.Models;
 
 namespace Api.Core.Services
 {
-    class RequestService : IRequestService
+    public class RequestService : IRequestService
     {
-        public async Task MethodAsync()
+        public async Task<MainResponce> MethodAsync()
         {
-            await "https://api.spacexdata.com/"
+            return await "https://api.spacexdata.com/"
                 .AppendPathSegments("v4", "landpads")
-                .GetJsonListAsync();
+                .GetJsonAsync<MainResponce>();
         }
     }
 }

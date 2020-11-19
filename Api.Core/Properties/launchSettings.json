@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Api.Core": {
+      "commandName": "Project"
+    }
+  }
+}
